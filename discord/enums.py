@@ -76,6 +76,7 @@ __all__ = (
     'PollLayoutType',
     'VoiceChannelEffectAnimationType',
     'SubscriptionStatus',
+    'MessageReferenceType',
 )
 
 
@@ -220,6 +221,12 @@ class ChannelType(Enum):
         return self.name
 
 
+class MessageReferenceType(Enum):
+    default = 0
+    reply = 0
+    forward = 1
+
+
 class MessageType(Enum):
     default = 0
     recipient_add = 1
@@ -258,6 +265,7 @@ class MessageType(Enum):
     guild_incident_alert_mode_disabled = 37
     guild_incident_report_raid = 38
     guild_incident_report_false_alarm = 39
+    purchase_notification = 44
 
 
 class SpeakingState(Enum):
